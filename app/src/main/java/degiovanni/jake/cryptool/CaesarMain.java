@@ -2,6 +2,7 @@ package degiovanni.jake.cryptool;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -10,6 +11,8 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.support.design.widget.FloatingActionButton;
+import android.widget.Toast;
 
 public class CaesarMain extends AppCompatActivity {
 
@@ -19,6 +22,8 @@ public class CaesarMain extends AppCompatActivity {
     Button mEnButton;
     Button mDeButton;
     Button mHoButton;
+    FloatingActionButton info;
+    DrawerLayout drawerlayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +40,7 @@ public class CaesarMain extends AppCompatActivity {
         mEnButton = (Button) findViewById(R.id.encrypt);
         mDeButton = (Button) findViewById(R.id.decrypt);
         final CaesarCipher c = new CaesarCipher();
+        info = (FloatingActionButton) findViewById(R.id.info);
 
         mEnButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,6 +68,15 @@ public class CaesarMain extends AppCompatActivity {
                     result = c.decode(mMsgText.getText().toString(), key);
                     mOutText.setText(result);
                 }
+            }
+        });
+
+        info.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(CaesarMain.this, "Hello World!", Toast.LENGTH_SHORT).show();
+                drawerlayout.OpenDrawer(Android.Support.v4.View.GravityCompat.Start);
+
             }
         });
     }

@@ -1,9 +1,8 @@
 package degiovanni.jake.cryptool;
 
 /**
- * Created by jake on 28/12/15.
  *
- * http://rosettacode.org/wiki/Caesar_cipher#Java
+ * Code taken from http://rosettacode.org/wiki/Caesar_cipher#Java
  */
 public class CaesarCipher {
 

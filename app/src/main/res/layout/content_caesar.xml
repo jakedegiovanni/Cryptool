@@ -83,4 +83,14 @@
         android:layout_alignEnd="@+id/encrypt"
         android:gravity="left" />
 
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/info"
+        android:layout_marginBottom="58dp"
+        android:src="@android:drawable/ic_dialog_info"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/caesar_choice"
+        android:layout_alignEnd="@+id/caesar_choice" />
+
 </RelativeLayout>
