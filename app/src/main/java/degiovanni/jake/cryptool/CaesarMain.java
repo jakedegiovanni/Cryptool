@@ -23,7 +23,6 @@ public class CaesarMain extends AppCompatActivity {
     Button mDeButton;
     Button mHoButton;
     FloatingActionButton info;
-    DrawerLayout drawerlayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,8 +74,6 @@ public class CaesarMain extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(CaesarMain.this, "Hello World!", Toast.LENGTH_SHORT).show();
-                drawerlayout.OpenDrawer(Android.Support.v4.View.GravityCompat.Start);
-
             }
         });
     }

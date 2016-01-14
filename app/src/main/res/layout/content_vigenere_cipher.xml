@@ -9,8 +9,8 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".CaesarMain"
-    tools:showIn="@layout/activity_caesar">
+    tools:context=".VigenereMain"
+    tools:showIn="@layout/activity_vigenere_cipher">
 
     <Button
         android:id="@+id/encrypt"
@@ -28,25 +28,10 @@
         android:layout_toRightOf="@id/encrypt"
         android:layout_toEndOf="@id/encrypt"/>
 
-    <TextView
-        android:id="@+id/msgText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:textColor="@android:color/holo_red_dark"
-        android:text="Your message"
-        android:editable="false"
-        android:textIsSelectable="true"
-        android:layout_below="@+id/user_msg"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="175dp" />
-
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/user_msg"
+        android:id="@+id/msgtxt"
         android:hint="Please type in your message to encrypt/decrypt"
         android:layout_marginTop="47dp"
         android:layout_below="@+id/encrypt"
@@ -57,41 +42,25 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-    <Spinner
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/caesar_choice"
-        android:spinnerMode="dropdown"
-        android:entries="@array/caesar_choices"
-        android:layout_below="@+id/user_msg"
-        android:layout_marginTop="54dp"
-        android:layout_toEndOf="@+id/decrypt"
-        android:layout_toRightOf="@+id/decrypt"
-        android:gravity="center_horizontal" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Select Your Key"
         android:id="@+id/keyMsg"
-        android:layout_alignTop="@+id/caesar_choice"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignBottom="@+id/caesar_choice"
-        android:layout_alignRight="@+id/encrypt"
-        android:layout_alignEnd="@+id/encrypt"
-        android:gravity="left" />
+        android:gravity="left"
+        android:layout_marginTop="181dp"
+        android:layout_below="@+id/msgtxt"
+        android:layout_centerHorizontal="true" />
 
-    <android.support.design.widget.FloatingActionButton
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/info"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="50dp"
-        android:src="@android:drawable/ic_dialog_info"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/caesar_choice"
-        android:layout_alignEnd="@+id/caesar_choice" />
-
+        android:id="@+id/keyText"
+        android:hint="Please type in your secret key"
+        android:layout_marginTop="41dp"
+        android:editable="true"
+        android:inputType="textAutoCorrect|text"
+        android:layout_below="@+id/msgtxt"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

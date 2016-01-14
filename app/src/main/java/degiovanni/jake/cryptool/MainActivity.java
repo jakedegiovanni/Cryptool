@@ -16,7 +16,9 @@ import android.widget.RelativeLayout;
 public class MainActivity extends AppCompatActivity {
 
     Button caesar;
+    Button vigenere;
     RelativeLayout cae;
+    RelativeLayout vig;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,18 +30,20 @@ public class MainActivity extends AppCompatActivity {
         //caesar = (Button) findViewById(R.id.caesar);
         cae = (RelativeLayout) findViewById(R.id.cCard);
 
-        /*caesar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Log.d("E-------", result);
-                MainActivity.this.startActivity(new Intent(MainActivity.this, CaesarMain.class));
-            }
-        }); */
+        vig = (RelativeLayout) findViewById(R.id.vCard);
 
         cae.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 MainActivity.this.startActivity(new Intent(MainActivity.this, CaesarMain.class));
+            }
+
+        });
+
+        vig.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MainActivity.this.startActivity(new Intent(MainActivity.this, VigenereMain.class));
             }
 
         });
