@@ -14,6 +14,7 @@ public class VigenereMain extends AppCompatActivity {
 
     TextView MsgText;
     TextView KeyText;
+    TextView out;
     Button mEnButton;
     Button mDeButton;
     Button mHoButton;
@@ -27,8 +28,9 @@ public class VigenereMain extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        MsgText = (TextView) findViewById(R.id.user_msg);
-        KeyText = (TextView) findViewById(R.id.msgText);
+        MsgText = (TextView) findViewById(R.id.msgText);
+        KeyText = (TextView) findViewById(R.id.keyText);
+        out = (TextView) findViewById(R.id.outMsg);
         mEnButton = (Button) findViewById(R.id.encrypt);
         mDeButton = (Button) findViewById(R.id.decrypt);
         final Vigenerecipher v = new Vigenerecipher();
@@ -37,13 +39,14 @@ public class VigenereMain extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String key = KeyText.getText().toString();
+                key = key.toUpperCase();
                 String result = MsgText.getText().toString();
                 if (result.equals(""))
-                    KeyText.setText("Please enter a message to encode");
+                    out.setText("Please enter a message to encode");
                 else {
                     result = v.encrypt(MsgText.getText().toString(), key);
                     // Log.d("E-------", result);
-                    KeyText.setText(result);
+                    out.setText(result);
                 }
             }
         });
@@ -52,17 +55,18 @@ public class VigenereMain extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String key = KeyText.getText().toString();
+                key = key.toUpperCase();
                 String result = MsgText.getText().toString();
                 if (result.equals(""))
-                    KeyText.setText("Please enter a message to decode");
+                    out.setText("Please enter a message to decode");
                 else {
                     result = v.decrypt(MsgText.getText().toString(), key);
-                    KeyText.setText(result);
+                    out.setText(result);
                 }
             }
         });
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+       /* FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -70,7 +74,7 @@ public class VigenereMain extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true); */
     }
 
 }

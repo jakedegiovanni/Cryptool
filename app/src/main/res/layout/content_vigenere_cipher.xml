@@ -46,12 +46,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Select Your Key"
-        android:id="@+id/keyMsg"
+        android:id="@+id/outMsg"
         android:gravity="left"
         android:layout_marginTop="181dp"
         android:layout_below="@+id/msgtxt"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:hint="Final Message" />
 
     <EditText
         android:layout_width="wrap_content"
