@@ -5,7 +5,7 @@ package degiovanni.jake.cryptool;
  *
  * code taken from http://rosettacode.org/wiki/Vigen%C3%A8re_cipher#Java
  */
-public class Vigenerecipher {
+public class VigenereCipher {
     static String encrypt(String text, final String key) {
         String res = "";
         text = text.toUpperCase();

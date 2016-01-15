@@ -13,7 +13,7 @@
     tools:showIn="@layout/activity_vigenere_cipher">
 
     <Button
-        android:id="@+id/encrypt"
+        android:id="@+id/encode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/encrypt"
@@ -21,22 +21,22 @@
         android:layout_marginStart="@dimen/button_margin"/>
 
     <Button
-        android:id="@+id/decrypt"
+        android:id="@+id/decode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/decrypt"
-        android:layout_toRightOf="@id/encrypt"
-        android:layout_toEndOf="@id/encrypt"/>
+        android:layout_toRightOf="@id/encode"
+        android:layout_toEndOf="@id/encode"/>
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/msgtxt"
+        android:id="@+id/msg"
         android:hint="Please type in your message to encrypt/decrypt"
         android:layout_marginTop="47dp"
-        android:layout_below="@+id/encrypt"
+        android:layout_below="@+id/encode"
         android:editable="true"
-        android:inputType="textAutoCorrect|text"
+        android:inputType="textCapCharacters"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
@@ -46,21 +46,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:id="@+id/outMsg"
+        android:id="@+id/out"
         android:gravity="left"
         android:layout_marginTop="181dp"
-        android:layout_below="@+id/msgtxt"
+        android:layout_below="@+id/msg"
         android:layout_centerHorizontal="true"
         android:hint="Final Message" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/keyText"
+        android:id="@+id/key"
         android:hint="Please type in your secret key"
-        android:layout_marginTop="41dp"
+        android:layout_marginTop="54dp"
         android:editable="true"
-        android:inputType="textAutoCorrect|text"
-        android:layout_below="@+id/msgtxt"
+        android:inputType="textCapCharacters"
+        android:layout_below="@+id/msg"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>

@@ -22,7 +22,6 @@ public class CaesarMain extends AppCompatActivity {
     Button mEnButton;
     Button mDeButton;
     Button mHoButton;
-    FloatingActionButton info;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +38,6 @@ public class CaesarMain extends AppCompatActivity {
         mEnButton = (Button) findViewById(R.id.encrypt);
         mDeButton = (Button) findViewById(R.id.decrypt);
         final CaesarCipher c = new CaesarCipher();
-        info = (FloatingActionButton) findViewById(R.id.info);
 
         mEnButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,14 +67,17 @@ public class CaesarMain extends AppCompatActivity {
                 }
             }
         });
+    }
 
-        info.setOnClickListener(new View.OnClickListener() {
+   /* FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(CaesarMain.this, "Hello World!", Toast.LENGTH_SHORT).show();
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
             }
         });
-    }
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true); */
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
