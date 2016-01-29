@@ -69,7 +69,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
                         android:paddingTop="4dp"
-                        android:src="@drawable/julius_caesar"
+                        android:src="@drawable/rotor"
                         android:id="@+id/random"
                         android:layout_alignParentTop="true"
                         android:layout_alignParentLeft="true"
