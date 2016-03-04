@@ -9,51 +9,131 @@
     tools:context="degiovanni.jake.cryptool.MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="75dp"
-        android:layout_marginTop="130dp"
-        android:textSize="30sp"
-        android:text="Caesar Cipher"
-        android:id="@+id/cae"
-        android:background="@color/colorButtonHomePrimary"
-        android:fontFamily="Verdana"
-        android:shadowColor="#000000"
-        android:elevation="100dp"
-        android:layout_marginLeft="3dp"
-        android:layout_marginRight="3dp" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars = "vertical"
+        android:scrollbarStyle="insideInset">
 
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="75dp"
-        android:text="Vigenere Cipher"
-        android:padding="16dp"
-        android:textSize="30sp"
-        android:textColor="@color/colorMainButtonText"
-        android:background="@color/colorButtonHomeSecondary"
-        android:id="@+id/vig"
-        android:fontFamily="Verdana"
-        android:shadowColor="#000000"
-        android:layout_marginTop="3dp"
-        android:layout_marginLeft="3dp"
-        android:layout_marginRight="3dp"
-        android:elevation="75dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="75dp"
-        android:text="Rot13 Cipher"
-        android:padding="16dp"
-        android:textSize="30sp"
-        android:textColor="@color/colorMainButtonText"
-        android:background="@color/colorButtonHomePrimary"
-        android:id="@+id/rot"
-        android:fontFamily="Verdana"
-        android:shadowColor="#000000"
-        android:elevation="50dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginLeft="3dp"
-        android:layout_marginRight="3dp" />
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_gravity="center"
+                android:elevation="20dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:id="@+id/ci"
+                        android:src="@drawable/julius_caesar"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:clickable="true" />
 
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="30sp"
+                        android:textColor="#ffffff"
+                        android:background="#000000"
+                        android:text="Caesar Cipher"
+                        android:id="@+id/cae"
+                        android:fontFamily="Verdana"
+                        android:allowUndo="false"
+                        android:alpha="0.6"
+                        android:paddingLeft="10dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
 
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_gravity="center"
+                android:elevation="20dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:id="@+id/vi"
+                        android:src="@drawable/rotor"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="3dp"/>
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:text="Vigenere Cipher"
+                        android:textSize="30sp"
+                        android:textColor="#ffffff"
+                        android:background="#000000"
+                        android:id="@+id/vig"
+                        android:fontFamily="Verdana"
+                        android:allowUndo="false"
+                        android:alpha="0.6"
+                        android:paddingLeft="10dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="25dp"
+                android:layout_gravity="center"
+                android:elevation="20dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:id="@+id/ri"
+                        android:src="@drawable/st_peters_basilica"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:text="Rot13 Cipher"
+                        android:textSize="30sp"
+                        android:textColor="#ffffff"
+                        android:background="#000000"
+                        android:id="@+id/rot"
+                        android:fontFamily="Verdana"
+                        android:allowUndo="false"
+                        android:alpha="0.6"
+                        android:paddingLeft="10dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

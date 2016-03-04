@@ -1,6 +1,7 @@
 package degiovanni.jake.cryptool;
 
 import android.content.Intent;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -16,8 +17,12 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button cae;
-    Button vig;
+    TextView cae;
+    TextView vig;
+    TextView rot;
+    ImageView caeI;
+    ImageView vigI;
+    ImageView rotI;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,9 +31,18 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        cae = (Button) findViewById(R.id.cae);
+        cae = (TextView) findViewById(R.id.cae);
+        vig = (TextView) findViewById(R.id.vig);
+        rot = (TextView) findViewById(R.id.rot);
 
-        vig = (Button) findViewById(R.id.vig);
+        caeI = (ImageView) findViewById(R.id.ci);
+        caeI.setImageResource(R.drawable.julius_caesar);
+
+        vigI = (ImageView) findViewById(R.id.vi);
+        vigI.setImageResource(R.drawable.rotor);
+
+        rotI = (ImageView) findViewById(R.id.ri);
+        rotI.setImageResource(R.drawable.st_peters_basilica);
 
         cae.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,7 +52,22 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
+        caeI.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MainActivity.this.startActivity(new Intent(MainActivity.this, CaesarMain.class));
+            }
+        });
+
         vig.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MainActivity.this.startActivity(new Intent(MainActivity.this, VigenereMain.class));
+            }
+
+        });
+
+        vigI.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 MainActivity.this.startActivity(new Intent(MainActivity.this, VigenereMain.class));
