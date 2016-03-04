@@ -12,13 +12,12 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button caesar;
-    Button vigenere;
-    RelativeLayout cae;
-    RelativeLayout vig;
+    Button cae;
+    Button vig;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,10 +26,9 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        //caesar = (Button) findViewById(R.id.caesar);
-        cae = (RelativeLayout) findViewById(R.id.cCard);
+        cae = (Button) findViewById(R.id.cae);
 
-        vig = (RelativeLayout) findViewById(R.id.vCard);
+        vig = (Button) findViewById(R.id.vig);
 
         cae.setOnClickListener(new View.OnClickListener() {
             @Override
