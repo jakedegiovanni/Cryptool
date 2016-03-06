@@ -4,6 +4,7 @@
     <string name="encrypt">Encrypt</string>
     <string name="decrypt">Decrypt</string>
     <string name="caesar">Caesar Cipher</string>
+    <string name="caesar_description">Statue of Julius Caesar</string>
     <string name="title_activity_caesar">Caesar</string>
     <string-array name="caesar_choices">
         <item>1</item>
@@ -33,5 +34,9 @@
         <item>25</item>
         <item>26</item>
     </string-array>
+    <string name="vigenere">Vigenere Cipher</string>
+    <string name="vigenere_description">Typewriter</string>
     <string name="title_activity_vigenere_cipher">Vigenere</string>
+    <string name="rot13">Rot13 Cipher</string>
+    <string name="rot13_description">Colloseum</string>
 </resources>
