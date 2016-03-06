@@ -38,12 +38,10 @@
                         android:layout_height="200dp"
                         android:id="@+id/ci"
                         android:src="@drawable/julius_caesar"
-                        android:layout_marginTop="3dp"
-                        android:layout_marginBottom="3dp"
                         android:clickable="true" />
 
                     <TextView
-                        android:layout_width="300dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="30sp"
                         android:textColor="#ffffff"
@@ -53,7 +51,7 @@
                         android:fontFamily="Verdana"
                         android:allowUndo="false"
                         android:alpha="0.6"
-                        android:paddingLeft="10dp"
+                        android:paddingLeft="5dp"
                         android:layout_alignBottom="@+id/ci"
                         android:layout_centerHorizontal="true" />
                 </RelativeLayout>
@@ -75,12 +73,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
                         android:id="@+id/vi"
-                        android:src="@drawable/rotor"
-                        android:layout_marginTop="3dp"
-                        android:layout_marginBottom="3dp"/>
+                        android:src="@drawable/rotor"/>
 
                     <TextView
-                        android:layout_width="300dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Vigenere Cipher"
                         android:textSize="30sp"
@@ -90,7 +86,7 @@
                         android:fontFamily="Verdana"
                         android:allowUndo="false"
                         android:alpha="0.6"
-                        android:paddingLeft="10dp"
+                        android:paddingLeft="5dp"
                         android:layout_alignBottom="@+id/vi"
                         android:layout_centerHorizontal="true" />
                 </RelativeLayout>
@@ -110,18 +106,17 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
                     <ImageView
-                        android:layout_width="300dp"
+                        android:layout_width="match_parent"
                         android:layout_height="200dp"
                         android:id="@+id/ri"
                         android:src="@drawable/st_peters_basilica"
                         android:layout_gravity="center"
                         android:layout_centerVertical="true"
                         android:layout_centerHorizontal="true"
-                        android:layout_marginTop="3dp"
-                        android:layout_marginBottom="3dp" />
+                        android:layout_marginTop="3dp"/>
 
                     <TextView
-                        android:layout_width="300dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Rot13 Cipher"
                         android:textSize="30sp"
@@ -131,7 +126,7 @@
                         android:fontFamily="Verdana"
                         android:allowUndo="false"
                         android:alpha="0.6"
-                        android:paddingLeft="10dp"
+                        android:paddingLeft="5dp"
                         android:layout_alignBottom="@+id/ri"
                         android:layout_centerHorizontal="true" />
                 </RelativeLayout>

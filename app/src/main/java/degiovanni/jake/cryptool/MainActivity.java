@@ -38,11 +38,11 @@ public class MainActivity extends AppCompatActivity {
         rot = (TextView) findViewById(R.id.rot);
 
         caeI = (ImageView) findViewById(R.id.ci);
-        Glide.with(this).load(R.drawable.julius_caesar).into(caeI);
+        Glide.with(this).load(R.drawable.julius_caesar).centerCrop().into(caeI);
     //    caeI.setImageResource(R.drawable.julius_caesar);
 
         vigI = (ImageView) findViewById(R.id.vi);
-        Glide.with(this).load(R.drawable.rotor).into(vigI);
+        Glide.with(this).load(R.drawable.rotor).centerCrop().into(vigI);
     //    vigI.setImageResource(R.drawable.rotor);
 
         rotI = (ImageView) findViewById(R.id.ri);
