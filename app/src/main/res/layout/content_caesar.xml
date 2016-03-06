@@ -81,6 +81,6 @@
         android:layout_alignBottom="@+id/caesar_choice"
         android:layout_alignRight="@+id/encrypt"
         android:layout_alignEnd="@+id/encrypt"
-        android:gravity="left" />
+        android:gravity="start" />
 
 </RelativeLayout>
