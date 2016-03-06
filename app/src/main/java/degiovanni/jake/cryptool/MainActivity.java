@@ -15,6 +15,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
 public class MainActivity extends AppCompatActivity {
 
     TextView cae;
@@ -36,13 +38,16 @@ public class MainActivity extends AppCompatActivity {
         rot = (TextView) findViewById(R.id.rot);
 
         caeI = (ImageView) findViewById(R.id.ci);
-        caeI.setImageResource(R.drawable.julius_caesar);
+        Glide.with(this).load(R.drawable.julius_caesar).into(caeI);
+    //    caeI.setImageResource(R.drawable.julius_caesar);
 
         vigI = (ImageView) findViewById(R.id.vi);
-        vigI.setImageResource(R.drawable.rotor);
+        Glide.with(this).load(R.drawable.rotor).into(vigI);
+    //    vigI.setImageResource(R.drawable.rotor);
 
         rotI = (ImageView) findViewById(R.id.ri);
-        rotI.setImageResource(R.drawable.st_peters_basilica);
+        Glide.with(this).load(R.drawable.rome).centerCrop().into(rotI);
+    //    rotI.setImageResource(R.drawable.st_peters_basilica);
 
         cae.setOnClickListener(new View.OnClickListener() {
             @Override
