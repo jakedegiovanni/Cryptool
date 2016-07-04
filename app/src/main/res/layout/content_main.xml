@@ -37,7 +37,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
                         android:id="@+id/ci"
-                        android:src="@drawable/julius_caesar"
                         android:clickable="true"
                         android:contentDescription="@string/caesar_description"/>
 
@@ -76,7 +75,6 @@
                         android:layout_height="200dp"
                         android:id="@+id/vi"
                         android:clickable="true"
-                        android:src="@drawable/rotor"
                         android:contentDescription="@string/vigenere_description" />
 
                     <TextView
@@ -114,7 +112,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
                         android:id="@+id/ri"
-                        android:src="@drawable/rome"
                         android:layout_gravity="center"
                         android:layout_centerVertical="true"
                         android:layout_centerHorizontal="true"
