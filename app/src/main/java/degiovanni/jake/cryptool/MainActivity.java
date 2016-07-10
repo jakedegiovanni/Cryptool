@@ -19,12 +19,14 @@ import com.bumptech.glide.Glide;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView cae;
-    TextView vig;
-    TextView rot;
+//    TextView cae;
+//    TextView vig;
+//    TextView rot;
     ImageView caeI;
     ImageView vigI;
     ImageView rotI;
+    CardView caesar_card;
+    CardView vigenere_card;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,51 +35,35 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        cae = (TextView) findViewById(R.id.cae);
-        vig = (TextView) findViewById(R.id.vig);
-        rot = (TextView) findViewById(R.id.rot);
+//        cae = (TextView) findViewById(R.id.cae);
+//        vig = (TextView) findViewById(R.id.vig);
+//        rot = (TextView) findViewById(R.id.rot);
+
+        caesar_card = (CardView) findViewById(R.id.card_caesar);
+        vigenere_card = (CardView) findViewById(R.id.card_vigenere);
 
         caeI = (ImageView) findViewById(R.id.ci);
         Glide.with(this).load(R.drawable.julius_caesar).centerCrop().into(caeI);
-    //    caeI.setImageResource(R.drawable.julius_caesar);
 
         vigI = (ImageView) findViewById(R.id.vi);
         Glide.with(this).load(R.drawable.rotor).centerCrop().into(vigI);
-    //    vigI.setImageResource(R.drawable.rotor);
 
         rotI = (ImageView) findViewById(R.id.ri);
         Glide.with(this).load(R.drawable.rome).centerCrop().into(rotI);
-    //    rotI.setImageResource(R.drawable.st_peters_basilica);
 
-        cae.setOnClickListener(new View.OnClickListener() {
+        caesar_card.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                MainActivity.this.startActivity(new Intent(MainActivity.this, CaesarMain.class));
-            }
-
-        });
-
-        caeI.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
+                caesar_card.setCardElevation(8);
                 MainActivity.this.startActivity(new Intent(MainActivity.this, CaesarMain.class));
             }
         });
 
-        vig.setOnClickListener(new View.OnClickListener() {
+        vigenere_card.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 MainActivity.this.startActivity(new Intent(MainActivity.this, VigenereMain.class));
             }
-
-        });
-
-        vigI.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                MainActivity.this.startActivity(new Intent(MainActivity.this, VigenereMain.class));
-            }
-
         });
 
     }

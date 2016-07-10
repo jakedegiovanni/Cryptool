@@ -21,14 +21,17 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <android.support.v7.widget.CardView
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="25dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:layout_gravity="center"
-                android:elevation="2dp">
+                card_view:cardCornerRadius="4dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:id="@+id/card_caesar">
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -37,7 +40,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
                         android:id="@+id/ci"
-                        android:clickable="true"
                         android:contentDescription="@string/caesar_description"/>
 
                     <TextView
@@ -54,18 +56,21 @@
                         android:paddingRight="5dp"
                         android:paddingStart="5dp"
                         android:layout_alignBottom="@+id/ci"
-                        android:layout_centerHorizontal="true" />
+                        android:layout_centerHorizontal="true"/>
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
 
-            <android.support.v7.widget.CardView
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="25dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:layout_gravity="center"
-                android:elevation="2dp">
+                card_view:cardCornerRadius="4dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:id="@+id/card_vigenere">
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -74,7 +79,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
                         android:id="@+id/vi"
-                        android:clickable="true"
                         android:contentDescription="@string/vigenere_description" />
 
                     <TextView
@@ -95,7 +99,7 @@
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
 
-            <android.support.v7.widget.CardView
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="25dp"
@@ -103,7 +107,10 @@
                 android:layout_marginRight="15dp"
                 android:layout_marginBottom="25dp"
                 android:layout_gravity="center"
-                android:elevation="2dp">
+                card_view:cardCornerRadius="4dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:id="@+id/card_rot">
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"

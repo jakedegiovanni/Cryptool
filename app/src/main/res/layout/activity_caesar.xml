@@ -23,7 +23,7 @@
     <include layout="@layout/content_caesar" />
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/info"
+        android:id="@+id/fab_caesar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
